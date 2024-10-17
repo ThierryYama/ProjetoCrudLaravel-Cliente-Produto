@@ -27,4 +27,15 @@ class Cliente extends Controller
         $clientes = ClienteModel::listar();
         return view('Cliente.index', compact('clientes'));
     }
+
+    public function destroy($id){
+        $status = ClienteModel::deletar($id);
+
+        if($status){
+            return redirect('listarCliente')->with('mensagem', 'Cliente deletado com sucesso!');
+        } else{
+            return redirect('listarCliente')->with('mensagem', 'Cliente não encontrado.');
+        }
+
+    }
 }
