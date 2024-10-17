@@ -28,4 +28,9 @@ class ClienteModel extends Model
         $clientes = DB::table('clientes')->get();
         return $clientes;
     }
+
+    public static function deletar($id){
+        $status = DB::table('clientes')->delete($id);
+        return $status;
+    }
 }
