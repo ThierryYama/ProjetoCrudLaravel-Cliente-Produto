@@ -32,7 +32,7 @@ Route::get('/atividade11', [ControllerAtividade::class, 'atividade11']);
 Route::get('cadastrarCliente', [Cliente::class, 'create']);
 Route::post('cadastrarCliente', [Cliente::class, 'store']);
 Route::get('listarCliente', [Cliente::class, 'index']);
-
+Route::delete('deletarCliente/{id}', [Cliente::class, 'destroy']);
 
 Route::get('cadastrarProduto', [Produto::class, 'create']);
 Route::post('cadastrarProduto', [Produto::class, 'store']);

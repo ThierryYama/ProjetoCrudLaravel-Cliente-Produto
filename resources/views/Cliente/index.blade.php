@@ -24,7 +24,7 @@
                 <td>{{$cliente->telefone}}</td>
                 <td>{{$cliente->email}}</td>
                 <td>
-                    <form action="" method="POST" onsubmit="return confirm('TEM CERTEZA?');">
+                    <form action="deletarCliente/{{ $cliente->id}}" method="POST" onsubmit="return confirm('TEM CERTEZA?');">
                         @csrf   
                         @method('DELETE')
                         <button type="submit">Deletar</button>
