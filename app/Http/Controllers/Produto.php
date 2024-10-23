@@ -4,24 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\DB;
-
+use App\Models\ProdutoModel;
 class Produto extends Controller
 {
     public function create(){
-        return view('Produto.create');
+        return view('Produto.create'); 
     }
 
     public function store(Request $request){
-        
-        $status = DB::table('produtos')->insert([
-            'nome' => $request->input('nome'),
-            'descricao' => $request->input('descricao'),
-            'medida' => $request->input('medida'),
-            'quantidade' => $request->input('quantidade'),
-            'preco' => $request->input('preco')
-        ]);
-    
+
+        $status = ProdutoModel::salvar($request);
 
         if ($status){
             return redirect()->back()->with('mensagem', 'Produto cadastrado com sucesso');
@@ -29,4 +21,39 @@ class Produto extends Controller
             return redirect()->back()->with('mensagem', 'Erro ao cadastrar o produto. Tente novamente.');
         }
     }
+
+    public function index()
+    {
+        $produtos = ProdutoModel::listar();
+        return view('Produto.index', compact('produtos'));
+    }
+
+    public function destroy($id)
+    {
+        $status = ProdutoModel::deletar($id);
+
+        if ($status) {
+            return redirect('listarProduto')->with('mensagem', 'Produto deletado com sucesso!');
+        } else {
+            return redirect('listarProduto')->with('mensagem', 'Produto não encontrado.');
+        }
+    }
+
+    public function edit($id)
+    {
+        $produto = ProdutoModel::consultar($id);                          
+        return view('Produto.edit', compact('produto'));                                                        
+    }
+
+    public function update(Request $request, $id)
+    {
+        $status = ProdutoModel::atualizar($request, $id);
+        
+        if ($status) {
+            return redirect('listarProduto')->with('mensagem', 'Produto atualizado com sucesso!');
+        } else {
+            return redirect('listarProduto')->with('mensagem', 'Produto não encontrado.');
+        }
+    }
+
 }

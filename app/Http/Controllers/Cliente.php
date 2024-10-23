@@ -38,4 +38,20 @@ class Cliente extends Controller
         }
 
     }
+    
+    public function edit($id){
+        $cliente = ClienteModel::consultar($id);                           //Retorno a view edit passando 
+        return view('Cliente.edit', compact('cliente')); //um cliente selecionado pelo ID                                                              
+    }
+
+    public function update(Request $request, $id){
+        $status = ClienteModel::atualizar($request, $id);
+        //Semelhante ao destroy (passa o id e um request)
+        if ($status) {
+            return redirect('listarCliente')->with('mensagem', 'Cliente atualizado com sucesso!');
+        } else {
+            return redirect('listarCliente')->with('mensagem', 'Cliente não encontrado.');
+        }  
+    }
+
 }

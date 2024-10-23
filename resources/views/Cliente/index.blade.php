@@ -9,9 +9,9 @@
 </head> 
 <body>  
     
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <input type="text" id="myInput" onkeyup="filtrar()" placeholder="Pesquisar Clientes..">
    <!-- feito com ajuda de: https://www.w3schools.com/howto/howto_js_filter_table.asp-->
-    
+   <!-- e  https://www.youtube.com/watch?v=VhORHExINuQ -->
 
     <table id="myTable">
         <tr>
@@ -38,7 +38,7 @@
                 </td>
 
                 <td>
-                    <a href="">Editar</a>
+                    <a href="editarCliente/{{$cliente->id}}">Editar</a>
                 </td>
             </tr>
 

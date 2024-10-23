@@ -33,6 +33,13 @@ Route::get('cadastrarCliente', [Cliente::class, 'create']);
 Route::post('cadastrarCliente', [Cliente::class, 'store']);
 Route::get('listarCliente', [Cliente::class, 'index']);
 Route::delete('deletarCliente/{id}', [Cliente::class, 'destroy']);
+Route::get('editarCliente/{id}', [Cliente::class, 'edit']);
+Route::put('/atualizarCliente/{id}', [Cliente::class, 'update']);
+
 
 Route::get('cadastrarProduto', [Produto::class, 'create']);
 Route::post('cadastrarProduto', [Produto::class, 'store']);
+Route::get('listarProduto', [Produto::class, 'index']);
+Route::delete('deletarProduto/{id}', [Produto::class, 'destroy']);
+Route::get('editarProduto/{id}', [Produto::class, 'edit']);
+Route::put('/atualizarProduto/{id}', [Produto::class, 'update']);
