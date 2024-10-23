@@ -40,6 +40,7 @@
                 <td>
                     <a href="editarCliente/{{$cliente->id}}">Editar</a>
                 </td>
+                <td><a href="{{route('dashboard')}}">Dashboard</a></td>
             </tr>
 
         @endforeach

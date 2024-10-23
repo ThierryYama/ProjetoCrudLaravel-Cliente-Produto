@@ -24,7 +24,7 @@
             <input type="submit" value="Cadastrar">
         </form>
     
-        <a href="listarProduto">Listar Produtos</a> <a href="cadastrarCliente">Cadastro de Clientes</a>
+        <a href="listarProduto">Listar Produtos</a>  <a href="{{route('dashboard')}}">Dashboard</a>
     </div>
 </body>
 </html>

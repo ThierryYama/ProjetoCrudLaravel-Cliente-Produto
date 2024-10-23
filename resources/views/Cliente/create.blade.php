@@ -23,5 +23,6 @@
     </form>
 
     <a href="/listarCliente">Listar Clientes</a>
+    <a href="{{route('dashboard')}}">Dashboard</a>
 </body>
 </html>
