@@ -1,0 +1,78 @@
+body {
+    background-image: url("/img/dr4.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(109, 105, 105, 0.7);
+}
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid rgb(11, 11, 11);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid rgba(71, 66, 66, 0.3);
+    text-align: left;
+}
+th {
+    background-color: rgba(56, 55, 55, 0.8); 
+}
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: darkred;
+}
+a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.formt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,69 @@
+body {
+    background-image: url("/img/dr4.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+.container {
+    background-color: rgba(56, 55, 55, 0.8); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 300px; 
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+p {
+    margin: 15px 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+input[type="submit"] {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+}
+a:hover {
+    text-decoration: underline;
+}
