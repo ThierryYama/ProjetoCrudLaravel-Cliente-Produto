@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("/img/dr4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+}
+
+h1 {
+    color: #8a3024;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #8a3024;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 15px 0;
+}
+
+span{
+    color: #8a3024;
+}
+
+p strong {
+    color: #333;
+}
+
+
+a{
+    text-decoration: none;
+    color: red
+}

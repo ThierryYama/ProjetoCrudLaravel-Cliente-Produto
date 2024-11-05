@@ -43,6 +43,7 @@
                             </form>
 
                             <a href="editarProduto/{{$produto->id}}">Editar</a>
+                            <a href="mostrarProduto/{{$produto->id}}">Ver detalhes</a>
                             <a href="{{route('dashboard')}}">Dashboard</a>
                         </div>
                     </td>

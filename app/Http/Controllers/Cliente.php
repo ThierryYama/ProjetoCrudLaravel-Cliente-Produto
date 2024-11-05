@@ -54,4 +54,9 @@ class Cliente extends Controller
         }  
     }
 
+    public function show($id){
+        $cliente = ClienteModel::consultar($id);
+        return view('Cliente.show', compact('cliente'));   
+    }
+
 }

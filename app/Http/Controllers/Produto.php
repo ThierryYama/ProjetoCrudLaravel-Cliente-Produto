@@ -56,4 +56,9 @@ class Produto extends Controller
         }
     }
 
+    public function show($id){
+        $produto = ProdutoModel::consultar($id);
+        return view('Produto.show', compact('produto'));
+    }
+
 }

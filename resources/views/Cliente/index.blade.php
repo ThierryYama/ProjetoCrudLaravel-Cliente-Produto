@@ -39,7 +39,8 @@
                             </form>
     
                         
-                                <a href="editarCliente/{{$cliente->id}}">Editar</a>    
+                                <a href="editarCliente/{{$cliente->id}}">Editar</a>
+                                <a href="mostrarCliente/{{$cliente->id}}">Ver Detalhes</a>    
                                 <a href="{{route('dashboard')}}">Dashboard</a>
                         </div>
                     </td>

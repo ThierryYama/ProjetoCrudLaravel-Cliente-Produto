@@ -39,6 +39,7 @@ Route::get('listarCliente', [Cliente::class, 'index'])->middleware(['auth'])->na
 Route::delete('deletarCliente/{id}', [Cliente::class, 'destroy'])->middleware(['auth']);
 Route::get('editarCliente/{id}', [Cliente::class, 'edit'])->middleware(['auth']);
 Route::put('/atualizarCliente/{id}', [Cliente::class, 'update'])->middleware(['auth']);
+Route::get('mostrarCliente/{id}', [Cliente::class, 'show'])->middleware(['auth'])->name('mostrarCliente');
 
 
 Route::get('cadastrarProduto', [Produto::class, 'create'])->middleware(['auth'])->name('cadastrarProduto');
@@ -47,6 +48,7 @@ Route::get('listarProduto', [Produto::class, 'index'])->middleware(['auth'])->na
 Route::delete('deletarProduto/{id}', [Produto::class, 'destroy'])->middleware(['auth']);
 Route::get('editarProduto/{id}', [Produto::class, 'edit'])->middleware(['auth']);
 Route::put('/atualizarProduto/{id}', [Produto::class, 'update'])->middleware(['auth']);
+Route::get('mostrarProduto/{id}', [Produto::class, 'show'])->middleware(['auth'])->name('mostarProduto');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
