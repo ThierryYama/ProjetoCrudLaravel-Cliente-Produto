@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerAtividade;
 use App\Http\Controllers\Cliente;
 use App\Http\Controllers\Produto;
+use App\Http\Controllers\CategoriaController;
 
 Route::get('/', function () {
     return redirect()->route('register');
@@ -49,6 +50,8 @@ Route::delete('deletarProduto/{id}', [Produto::class, 'destroy'])->middleware(['
 Route::get('editarProduto/{id}', [Produto::class, 'edit'])->middleware(['auth']);
 Route::put('/atualizarProduto/{id}', [Produto::class, 'update'])->middleware(['auth']);
 Route::get('mostrarProduto/{id}', [Produto::class, 'show'])->middleware(['auth'])->name('mostarProduto');
+
+Route::resource('Categorias', CategoriaController::class);    
 
 Route::get('/dashboard', function () {
     return view('dashboard');
