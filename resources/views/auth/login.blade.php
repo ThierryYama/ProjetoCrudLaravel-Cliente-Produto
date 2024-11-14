@@ -46,4 +46,5 @@
     </form>
 
     <a href="{{ route('register') }}">Registro</a>
+    <a href="{{ route('google.redirect') }}">Login com o Google</a>
 </x-guest-layout>

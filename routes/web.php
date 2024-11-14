@@ -6,9 +6,12 @@ use App\Http\Controllers\ControllerAtividade;
 use App\Http\Controllers\Cliente;
 use App\Http\Controllers\Produto;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\GoogleLoginController;
+use Illuminate\Support\Facades\Auth;
+
 
 Route::get('/', function () {
-    return redirect()->route('register');
+    return redirect()->route('login');
 });
 
 
@@ -52,6 +55,10 @@ Route::put('/atualizarProduto/{id}', [Produto::class, 'update'])->middleware(['a
 Route::get('mostrarProduto/{id}', [Produto::class, 'show'])->middleware(['auth'])->name('mostarProduto');
 
 Route::resource('Categorias', CategoriaController::class);    
+
+Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback']);
+Route::post('/logout', [GoogleLoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
